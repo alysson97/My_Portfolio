@@ -1,6 +1,3 @@
-**README.md**
-
-```markdown
 # Alysson Victoria - Portfólio 🚀
 
 Bem-vindo ao meu portfólio! Este projeto foi desenvolvido com ❤️ usando React, Next.js e Tailwind CSS.
@@ -80,5 +77,5 @@ Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para 
 Este portfólio é mais do que uma vitrine; é uma porta de entrada para conhecer meu trabalho e minha abordagem no desenvolvimento web. Sinta-se à vontade para explorar e, se precisar de mais informações, não hesite em entrar em contato.
 
 🚀 Desenvolvido por Alysson Victoria
-```
+
 
