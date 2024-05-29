@@ -158,8 +158,8 @@ header{
   aspect-ratio: 16/10;
 
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
   transition: 3s ease;
 }
 .git-container{
@@ -217,6 +217,24 @@ header{
 
 .dark{
   @apply bg-black;
+}
+
+//scroll effect
+.reveal {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  //margin: 20px 0;
+  //background: #fff;
+  //padding: 20px;
+  //border-radius: 8px;
+  //box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Classe para revelar elementos */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*  @media(color-scheme: dark){

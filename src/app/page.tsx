@@ -1,6 +1,7 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import retangulo from "./../../public/img/Geometric/retangulo.png";
 import perfil from "./../../public/img/Perfil/Aly-perfil.jpg";
 import logo from "./../../public/img/Header/Logo-crop.png"
@@ -17,6 +18,27 @@ import gitProjeto from "./../../public/img/Projetos/Github-large.png";
 
 export default function App(){
 
+  useEffect(() => {
+    const reveal = () => {
+      const reveals = document.querySelectorAll('.reveal');
+      reveals.forEach((reveal) => {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveal.getBoundingClientRect().top;
+        const elementVisible = 250;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveal.classList.add('active');
+        } else {
+          reveal.classList.remove('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', reveal);
+    reveal();
+
+    return () => window.removeEventListener('scroll', reveal);
+  }, []);
 
   return(
     <div className="bg-slate-100 dark:bg-black page">
@@ -52,7 +74,7 @@ export default function App(){
         </section>
 
 
-        <section className="flex w-screen" id="sobre">
+        <section className="flex  reveal" id="sobre">
 
           <div className="flex my-24 py-16 foto-container ">
             {/* adcionei flex */}
@@ -61,12 +83,11 @@ export default function App(){
               alt="retangulo"
               src={retangulo}
               className="absolute retangulo"
-              
               />
+
               <Image
                 alt="foto perfil"
                 src={perfil}
-
                 className="z-20 relative lg:ml-24 md:ml-20 ml-16 md:pt-14 pt-2 foto-perfil"
                 quality={100}
                 /* sizes="(max-width: 768px) 100vw" */
@@ -76,7 +97,6 @@ export default function App(){
           
           <div className="flex justify-center items-center who-am-i">
             <div className="vl my-40"></div>
-                        {/* adcionei flex e flex-col */}
             <div className=" texto md:px-8">
               <h1 className="aly-vic lg:text-xl">Who am i?</h1>
               <h1 className="lg:text-xl mb-2">I am Alysson Victoria, a developer</h1>
@@ -88,7 +108,7 @@ export default function App(){
         </section>
 
 
-        <section className="services" id="skills">
+        <section className="services reveal" id="skills">
 
           <h1 className="lg:text-4xl text-2xl tracking-wide my-8 p-8">My services</h1>
 
@@ -108,14 +128,14 @@ export default function App(){
         </section>
 
 
-        <section className="mb-64 skills geometric">
+        <section className="mb-64 skills geometric reveal">
           <h1 className="lg:text-4xl text-2xl tracking-wide my-8 p-8">Skills</h1>
           <Skills/>
           
         </section>
 
 
-        <section className="projetos" id="projetos">
+        <section className="projetos reveal" id="projetos">
           <h1 className="lg:text-4xl text-2xl tracking-wide my-24 p-8">Projetos</h1>
           <form className="site-aline-container mx-auto" action="https://github.com/alysson97" target="_blank">
 
@@ -129,8 +149,10 @@ export default function App(){
           </form>
         </section>
           
-
-        <Contato id={"contato"}/>
+        <div className="reveal">
+          <Contato id={"contato"}/>
+        </div>
+        
 
         
 
