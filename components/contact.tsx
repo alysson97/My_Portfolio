@@ -19,7 +19,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Implementar lógica de envio de email
-    const mailtoLink = `mailto:contato@alyssonvictoria.dev?subject=Contato de ${formData.name}&body=${formData.message}%0D%0A%0D%0AEmail: ${formData.email}`
+    const mailtoLink = `mailto:alyssonfvictoria@gmail.com?subject=Contato de ${formData.name}&body=${formData.message}%0D%0A%0D%0AEmail: ${formData.email}`
     window.location.href = mailtoLink
   }
 
@@ -54,10 +54,10 @@ export function Contact() {
                 <div>
                   <p className="font-medium">Email</p>
                   <a
-                    href="mailto:contato@alyssonvictoria.dev"
+                    href="mailto:alyssonfvictoria@gmail.com"
                     className="text-sm text-muted-foreground hover:text-accent transition-colors"
                   >
-                    contato@alyssonvictoria.dev
+                    alyssonfvictoria@gmail.com
                   </a>
                 </div>
               </Card>

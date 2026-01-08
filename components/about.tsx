@@ -68,10 +68,6 @@ export function About() {
               <h3 className="text-xl font-semibold text-foreground mb-4">Formação Acadêmica</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="font-medium text-foreground">Tecnologia da Informação</p>
-                  <p className="text-sm">Instituto Federal de São Paulo (IFSP) • 2022 - 2026</p>
-                </div>
-                <div>
                   <p className="font-medium text-foreground">Análise de Sistemas de Computação</p>
                   <p className="text-sm">Instituto Federal de São Paulo (IFSP) • 2022 - 2025</p>
                 </div>
