@@ -10,7 +10,7 @@ const skillCategories = [
   {
     title: "Backend",
     icon: Database,
-    skills: ["Node.js", "PHP", "Laravel", "Yii2", "MySQL", "PostgreSQL", "REST APIs", "GraphQL"],
+    skills: ["Node.js", "PHP", "Laravel", "Yii2", "MySQL", "PostgreSQL", "REST APIs"],
   },
   {
     title: "Ferramentas & Práticas",
